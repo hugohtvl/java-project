@@ -20,22 +20,25 @@ function Home() {
   console.info(pokemons);
 
   return (
-    <>
+    <div id="homeGlobal">
       <h1>Ceci est un onepage avec un back Java !</h1>
-      <h2>oui il n&apos;y a que du get ...</h2>
       <div id="pokemonGlobal">
         {pokemons.map((pokemon) => (
           <div key={pokemon.id} id="pokemonCard">
-            <p>{pokemon.name}</p>
+            <p id="pokemonName">{pokemon.name}</p>
             <img src={pokemon.imgurl} />
             <div id="attackPower">
-              <p>{pokemon.attackName}</p>
-              <p>{pokemon.attackPower}</p>
+              <p>
+                <span>Attaque favorite</span> {pokemon.attackName}
+              </p>
+              <p>
+                <span>Puissance de l&apos;attaque</span> {pokemon.attackPower}
+              </p>
             </div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

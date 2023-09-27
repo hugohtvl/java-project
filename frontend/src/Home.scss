@@ -1,4 +1,44 @@
-#pokemonGlobal {
-  border: 2px solid red;
+#homeGlobal {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  #pokemonGlobal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+
+    #pokemonCard {
+      width: 20%;
+      height: 50%;
+      border: 10px solid #9c9c9c;
+      border-radius: 6px;
+
+      #pokemonName {
+        font-family: $content-font;
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+
+      img {
+        aspect-ratio: 1/1;
+        width: 60%;
+      }
+
+      #attackPower {
+        p {
+          display: flex;
+          flex-direction: column;
+          font-size: 20px;
+          span {
+            font-size: initial;
+          }
+        }
+      }
+    }
+  }
 }
